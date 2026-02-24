@@ -17,10 +17,11 @@ public class OfferServiceImpl implements OfferService {
     }
 
     @Override
-    public void createOrder(AddOfferDTO addOfferDTO) {
+    public long createOrder(AddOfferDTO addOfferDTO) {
 
-        offerRepository.save(map(addOfferDTO));
+        return offerRepository.save(map(addOfferDTO)).getId();
 
+        // returns order ID
     }
 
     @Override

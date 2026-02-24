@@ -5,7 +5,7 @@ import project.mobilele.model.OfferDetailsDTO;
 
 public interface OfferService {
 
-void createOrder(AddOfferDTO addOfferDTO);
+long createOrder(AddOfferDTO addOfferDTO);
 
 OfferDetailsDTO getOfferDetails(Long id);
 
